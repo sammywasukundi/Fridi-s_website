@@ -108,7 +108,8 @@ if(isset($_POST['submit_message'])){
             $message=htmlspecialchars($_POST['message']);
 
 
-            
+            // 
+            // 
         }
     }
 }
