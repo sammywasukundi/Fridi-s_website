@@ -1,5 +1,4 @@
 <?php
- // admin submit
  include 'dbconnexion.php';
 
 if(isset($_POST['submit_admin'])){
@@ -99,18 +98,5 @@ if(isset($_POST['submit_admin_connexion'])){
     }
 }
 
-// insertion messages 
-if(isset($_POST['submit_message'])){
-    if(isset($_POST['destinateur_mail'],$_POST['destinataire_mail'],$_POST['message'])){
-        if (!empty($_POST['destinateur_mail'] and $_POST['destinataire_mail'] and $_POST['message'])){
-            $destinateur_mail=htmlspecialchars($_POST['destinateur_mail']);
-            $destinataire_mail=htmlspecialchars($_POST['destinataire_mail']);
-            $message=htmlspecialchars($_POST['message']);
 
-
-            // 
-            // 
-        }
-    }
-}
 ?>

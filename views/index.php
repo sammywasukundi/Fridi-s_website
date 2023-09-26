@@ -262,7 +262,7 @@
             <!-- <h2 class="text-center font-semibold" style="text-shadow: 0 0 2px #316472;">Lire ou télécharger</h2>   -->
             <div class="flex justify-center w-[90%] ml-[5%] mt-12 rounded-md space-x-2 md:mb-12" style="margin-top:30px; text-shadow: 0 0 2px #316472;">
                 <?php
-                    if(!isset($_SESSION['id'])){
+                    if(!isset($_SESSION['id']) && !isset($_SESSION['id_admin'])){
                 ?>
                 <button class="flex bg-white border border-blue-400 hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-5 py-3 rounded-md font-semibold dark:bg-blue-300 mt-10"><a href="inscription.php">S'inscrire</a></button>
                 <button class="flex bg-white border border-blue-400 hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-5 py-3 rounded-md font-semibold dark:bg-blue-300 mt-10"><a href="connexion.php">Connexion</a></button>
