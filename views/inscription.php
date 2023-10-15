@@ -26,19 +26,29 @@
                         <form class="space-y-4 md:space-y-6" action="#" enctype="multipart/form-data" method="post">
                             <div>
                                 <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre nom</label>
-                                <input type="text" name="nom" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ex:samBro">
+                                <input type="text" name="nom" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Sam Bro">
                             </div>
                             <div>
-                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre Email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ex:brosammy@gmail.com">
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre Email</label>
+                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="brosammy@gmail.com">
                             </div>
+                            <!-- alert -->
+                            <div id="alert-1" role="alert">
+                                <span id="alert-pwd"></span>
+                            </div>
+                            <!-- alert -->
                             <div>
-                                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de passe</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Mot de passe</label>
+                                <input type="password" name="password" id="password_user" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" oninput="MonAlert()">
                             </div>
+                            <!-- alert -->
+                            <div id="alert-2" role="alert">
+                                <span id="alert-pwd1"></span>
+                            </div>
+                            <!-- alert -->
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirmer le Mot de passe</label>
-                                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <input type="password" name="confirmpassword" id="confirmpassword_user" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" oninput="MonAlert1()">
                             </div>
                             <div>
                                 <label for="file" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choisir une photo</label>
@@ -56,23 +66,29 @@
                         <form class="space-y-4 md:space-y-6" action="#" enctype="multipart/form-data" method="post">
                             <div>
                                 <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre nom</label>
-                                <input type="text" name="nom_admin" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ex:samBro">
+                                <input type="text" name="nom_admin" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Sam Bro">
                             </div>
-                            <!-- <div>
-                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre Email</label>
-                                <input type="email" name="email_admin" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ex:brosammy@gmail.com">
-                            </div> -->
                             <div>
-                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre N° Téléphone</label>
-                                <input type="text" name="phone_admin" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ex:+243999576452">
+                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre Numero de Téléphone</label>
+                                <input type="text" name="phone_admin" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="+2439-9957-6452" pattern="^(\+243|0)[1-9]\d{8}$" required>
                             </div>
+                            <!-- alert -->
+                            <div id="alert-3">
+                                <span id="alert-pwd2"></span>
+                            </div>
+                            <!-- alert -->
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de passe</label>
-                                <input type="password" name="password_admin" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <input type="password" name="password_admin" id="password_admin" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" oninput="MonAlert3()">
                             </div>
+                            <!-- alert -->
+                            <div id="alert-4">
+                                <span id="alert-pwd3"></span>
+                            </div>
+                            <!-- alert -->
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirmer le Mot de passe</label>
-                                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <input type="password" name="confirmpassword" id="confirmpassword_admin" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" oninput="MonAlert4()">
                             </div>
                             <div>
                                 <label for="file" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choisir une photo</label>
@@ -89,3 +105,47 @@
         </div>
 </section>
 <?php include('footer.php');?>
+<script>
+    function MonAlert(){
+        let alert = document.getElementById('password_user').value;
+        let recup_alert = document.getElementById('alert-1');
+        if(alert.length >= 1 && alert.length < 8){
+            document.getElementById('alert-pwd').innerHTML='<p class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">Le mot de passe doit avoir aumoins 8 caractères</p>';
+        }        
+        else{
+            recup_alert.style.display='none';
+        }
+    }
+    function MonAlert1(){
+        let alertpwd = document.getElementById('password_user').value;
+        let alertconfirm = document.getElementById('confirmpassword_user').value;
+        let recup_alert = document.getElementById('alert-2');
+        if(alertpwd.length != alertconfirm.length)
+        {
+            document.getElementById('alert-pwd1').innerHTML='<p class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">Confirmez le mot de passe</p>';
+        }else{
+            recup_alert.style.display='none';
+        }       
+    }
+    function MonAlert3(){
+        let alert = document.getElementById('password_admin').value;
+        let recup_alert = document.getElementById('alert-3');
+        if(alert.length >= 1 && alert.length < 8){
+            document.getElementById('alert-pwd2').innerHTML='<p class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">Le mot de passe doit avoir aumoins 8 caractères</p>';
+        }        
+        else{
+            recup_alert.style.display='none';
+        }
+    }
+    function MonAlert4(){
+        let alertpwd = document.getElementById('password_admin').value;
+        let alertconfirm = document.getElementById('confirmpassword_admin').value;
+        let recup_alert = document.getElementById('alert-4');
+        if(alertpwd.length != alertconfirm.length)
+        {
+            document.getElementById('alert-pwd3').innerHTML='<p class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">Confirmez le mot de passe</p>';
+        }else{
+            recup_alert.style.display='none';
+        }       
+    }
+</script>

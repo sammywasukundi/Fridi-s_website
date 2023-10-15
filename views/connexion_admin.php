@@ -38,13 +38,13 @@
         let longuer = document.getElementById('password').value;
         
         if(longuer.length > 0 && longuer.length < 4){
-            document.getElementById('lenght').innerHTML='<p style="color:#FF033E; text-align: center; font-size:26px;">faible</p>';
+            document.getElementById('lenght').innerHTML='<p class="flex items-center p-4 mb-4 text-semibold text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">faible</p>';
         }
         else if(longuer.length >= 4 && longuer.length < 8){
-        document.getElementById('lenght').innerHTML='<p style="color:#FFC72C; text-align: center; font-size:26px;">moyen</p>'; 
+        document.getElementById('lenght').innerHTML='<p class="flex items-center p-4 mb-4 text-semibold text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-red-400">moyen</p>'; 
         }
         else{
-            document.getElementById('lenght').innerHTML='<p style="color:#32de84; text-align: center; font-size:26px;">long</p>';   
+            document.getElementById('lenght').innerHTML='<p class="flex items-center p-4 mb-4 text-semibold text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-red-400">long</p>';   
         }
     }
 </script>

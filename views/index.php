@@ -5,7 +5,7 @@
             <figure class=" relative transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" >
             <div style="margin-left: 35%;" class="absolute flex justify-center mt-14">
                     <?php 
-                        if(isset($_SESSION['id'])){
+                        if(isset($_SESSION['id_auteur'])){
                     ?>
                         <div id="toast-success" class="flex items-center p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800 mt-10 z-50" role="alert">
                             <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
@@ -77,7 +77,7 @@
 
             <div id="network_reseau" class="relative block text-center space-y-6">
                 <?php
-                    if(isset($_SESSION['id'])){
+                    if(isset($_SESSION['id_auteur'])){
                 ?>
                     <ul class="block fixed z-50 justify-end mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 sm:mt-4 top-24">
                         <div class="bg-slate-600 rounded-tr-xl hover:shadow-inner transform hover:scale-110 hover:bg-white hover:text-white transition ease-in duration-500">
@@ -114,25 +114,25 @@
                     <ul class="block fixed z-50 justify-end mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 sm:mt-4 top-24">
                         <div class="bg-slate-600 rounded-tr-xl hover:shadow-inner transform hover:scale-110 hover:bg-white hover:text-white transition ease-in duration-500">
                             <li class="py-1">
-                                <a href="#" class="hover:underline"><ion-icon name="logo-whatsapp" class="mt-2 text-3xl font-bold text-green-500 px-2"></ion-icon>
+                                <a href="https://web.whatsapp.com/" class="hover:underline"><ion-icon name="logo-whatsapp" class="mt-2 text-3xl font-bold text-green-500 px-2"></ion-icon>
                                 </a>
                             </li> 
                         </div>
                         <div class="bg-slate-600 hover:shadow-inner transform hover:scale-110 hover:bg-white hover:text-white transition ease-in duration-500">
                             <li class="py-1">
-                                <a href="#" class="hover:underline"><ion-icon name="logo-facebook" class="mt-2 text-3xl font-bold text-blue-600"></ion-icon>
+                                <a href="https://web.facebook.com/search/top?q=uniluk" class="hover:underline"><ion-icon name="logo-facebook" class="mt-2 text-3xl font-bold text-blue-600"></ion-icon>
                                 </a>
                             </li> 
                         </div>
                         <div class="bg-slate-600 hover:shadow-inner transform hover:scale-110 hover:bg-white hover:text-white transition ease-in duration-500">
                             <li class="py-1">
-                                <a href="#" class="hover:underline"><ion-icon name="logo-twitter" class="mt-2 text-3xl font-bold text-blue-400"></ion-icon>
+                                <a href="https://www.youtube.com/?hl=FR" class="hover:underline"><ion-icon name="logo-twitter" class="mt-2 text-3xl font-bold text-blue-400"></ion-icon>
                                 </a>
                             </li> 
                         </div>
                         <div class="bg-slate-600 rounded-br-xl hover:shadow-inner transform hover:scale-110 hover:bg-white transition ease-in duration-500">
                             <li class="py-1">
-                                <a href="#" class="hover:underline"><ion-icon name="logo-youtube" class="mt-2 text-3xl font-bold text-red-600 "></ion-icon>
+                                <a href="https://twitter.com/?lang=fr" class="hover:underline"><ion-icon name="logo-youtube" class="mt-2 text-3xl font-bold text-red-600 "></ion-icon>
                                 </a>
                             </li> 
                         </div>
@@ -158,11 +158,6 @@
                             Le suivi d'un projet consiste à examiner les moyens déployés et les activités menées en vue de surveiller les progrès accomplis par rapport aux indicateurs sur la voie de la réalisation des produits.
                         </p>
                     </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
                 </div>
                 <div id="activity02" class="max-w-sm rounded overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110">
                     <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/book2.jpg" alt="Sunset in the mountains">
@@ -174,11 +169,6 @@
                             maison d'édition de publication nomée EDITIONS DU FRIDI
                             (EdiFridi) de l'Université Adventiste de Lukanga et l'ISTM-Lukanga
                         </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
                     </div>
                 </div>
                 
@@ -192,222 +182,88 @@
                                 particulier , des monographies.
                             </p>
                         </div>
-                        <div class="px-6 pb-8 flex justify-center space-x-4">
-                            <button class="flex bg-white border border-blue-400 hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-3 py-1 rounded-md text-xl dark:bg-blue-300 mt-10"><a href="user.php">Voir plus</a></button>
-                            <button class="flex bg-white border border-blue-400 hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-3 py-1 rounded-md text-xl dark:bg-blue-300 mt-10"><a href="inscription.php">S'inscrire</a></button>
-                        </div>
                     </a>    
                 </div>   
                 
 
             </div>
+            <?php if(isset($_SESSION['id_auteur']) || isset($_SESSION['id_admin'])){ ?>
             <h2 class="text-center font-semibold" style="text-shadow: 0 0 2px #316472;">Ouvrages récemment publiées <br> et leurs auteurs</h2>  
+            <?php } ?>
+            <?php
+                if(isset($_SESSION['id_auteur']) || isset($_SESSION['id_admin'])){
+                    $select=$pdo->prepare('SELECT * FROM table_livre ORDER BY id DESC LIMIT 0, 2');
+                    $select->execute();
+                    while($read=$select->fetch()){
+                        $_SESSION['avatarAuteur'] = $read['avatarAuteur'];
+                        $i=0;
 
-            <div class="w-[90%] items-center ml-[5%] mt-12">
-                <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
-                    <figure id="author01" class="z-10 overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110 flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
-                            <p class="my-4">If you care for your time, I hands down would go with this."</p>
-                        </blockquote>
-                        <figcaption class="flex items-center justify-center space-x-3">
-                            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                            <div class="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Bonnie Green</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">Developer at Open AI</div>
-                            </div>
-                        </figcaption>    
-                    </figure>
-                    <figure id="author02" class="z-10 overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110 flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-                            <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
-                        </blockquote>
-                        <figcaption class="flex items-center justify-center space-x-3">
-                            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
-                            <div class="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Roberta Casas</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
-                            </div>
-                        </figcaption>    
-                    </figure>
-                    <figure id="author03" class="z-10 overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110 flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
-                            <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
-                        </blockquote>
-                        <figcaption class="flex items-center justify-center space-x-3">
-                            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
-                            <div class="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Jese Leos</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
-                            </div>
-                        </figcaption>    
-                    </figure>
-                    <figure id="author04" class="z-10 overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110 flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-                            <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
-                        </blockquote>
-                        <figcaption class="flex items-center justify-center space-x-3">
-                            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture">
-                            <div class="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Joseph McFall</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">CTO at Google</div>
-                            </div>
-                        </figcaption>    
-                    </figure>
+            ?>
+            <div  class="grid sm:space-y-4 w-[90%] items-center ml-[5%] mt-12 lg:grid-cols-2 md:grid-cols-2">
+                <div id="author01" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="avatar_auteur/<?= $_SESSION['avatarAuteur']; ?>" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><?= $read['titre']; ?></h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?= 'Domaine : '.$read['domaine']; ?></p>
+
+                        <div class="badge mb-6">
+                            <svg class="w-5 inline-block" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span><?php echo $read['laDate'];  ?></span>
+                        </div>
+                        <a href="livre_auteur/<?= $read['livreAuteur'] ;?>" class="inline-flex items-center text-sm font-medium text-center text-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:text-gray-300">
+                            Lire le livre
+                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+                <div id="author02" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="avatar_auteur/<?= $_SESSION['avatarAuteur']; ?>" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><?= $read['titre']; ?></h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?= 'Domaine : '.$read['domaine']; ?></p>
+                        
+                        <div class="badge mb-6">
+                            <svg class="w-5 inline-block" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span><?php echo $read['laDate'];  ?></span>
+                        </div>
+                        <a href="livre_auteur/<?= $read['livreAuteur'] ;?>" class="inline-flex items-center text-sm font-medium text-center text-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:text-gray-300">
+                            Lire le livre
+                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <?php
+                        $i++;
+                    }
+                }
+            ?>
             <!-- <h2 class="text-center font-semibold" style="text-shadow: 0 0 2px #316472;">Lire ou télécharger</h2>   -->
             <div class="flex justify-center w-[90%] ml-[5%] mt-12 rounded-md space-x-2 md:mb-12" style="margin-top:30px; text-shadow: 0 0 2px #316472;">
                 <?php
-                    if(!isset($_SESSION['id']) && !isset($_SESSION['id_admin'])){
+                    if(!isset($_SESSION['id_auteur']) && !isset($_SESSION['id_admin'])){
                 ?>
                 <button class="flex bg-white border border-blue-400 hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-5 py-3 rounded-md font-semibold dark:bg-blue-300 mt-10"><a href="inscription.php">S'inscrire</a></button>
                 <button class="flex bg-white border border-blue-400 hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-5 py-3 rounded-md font-semibold dark:bg-blue-300 mt-10"><a href="connexion.php">Connexion</a></button>
                 <?php
                     }else{
                 ?>
-                <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 space-x-4 items-center"></div>
-                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <div class="flex justify-end px-4 pt-4">
-                            <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
-                                <span class="sr-only">Open dropdown</span>
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                                </svg>
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                <ul class="py-2" aria-labelledby="dropdownButton">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center pb-10">
-                            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="images/slide/book3.avif" alt="Bonnie image"/>
-                            <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                            <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                            <div class="flex mt-4 space-x-3 md:mt-6">
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add friend</a>
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <div class="flex justify-end px-4 pt-4">
-                            <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
-                                <span class="sr-only">Open dropdown</span>
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                                </svg>
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                <ul class="py-2" aria-labelledby="dropdownButton">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center pb-10">
-                            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="images/slide/book3.avif" alt="Bonnie image"/>
-                            <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                            <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                            <div class="flex mt-4 space-x-3 md:mt-6">
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add friend</a>
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <div class="flex justify-end px-4 pt-4">
-                            <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
-                                <span class="sr-only">Open dropdown</span>
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                                </svg>
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                <ul class="py-2" aria-labelledby="dropdownButton">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center pb-10">
-                            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="images/slide/book3.avif" alt="Bonnie image"/>
-                            <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                            <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                            <div class="flex mt-4 space-x-3 md:mt-6">
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add friend</a>
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <div class="flex justify-end px-4 pt-4">
-                            <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
-                                <span class="sr-only">Open dropdown</span>
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                                </svg>
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                <ul class="py-2" aria-labelledby="dropdownButton">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center pb-10">
-                            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="images/slide/book3.avif" alt="Bonnie image"/>
-                            <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                            <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                            <div class="flex mt-4 space-x-3 md:mt-6">
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add friend</a>
-                                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
-                            </div>
-                        </div>
-                    </div>
+
                 <?php
                     }
                 ?>
             </div>
             <!-- positionning -->
-            <?php if(isset($_SESSION['id'])){ include 'positionning.php'; }if(isset($_SESSION['id_admin'])){ include 'positionning.php'; }?>
+            <?php if(isset($_SESSION['id_auteur'])){ include 'positionning.php'; }if(isset($_SESSION['id_admin'])){ include 'positionning.php'; }?>
             <!-- end code positionning -->
             
         </main>
@@ -415,14 +271,14 @@
 
     </body>
     <script>
-        ScrollReveal().reveal('#title',{delay:200,distance : '100px',duration : 2800,reset : true, origin:'top'});
-        ScrollReveal().reveal('#para',{delay:200,distance : '80px',duration : 3600,reset : true, origin:'top'});
+        ScrollReveal().reveal('#title',{delay:200,distance : '200px',duration : 2800,reset : true, origin:'top'});
+        ScrollReveal().reveal('#para',{delay:200,distance : '200px',duration : 3000,reset : true, origin:'top'});
         ScrollReveal().reveal('#network_reseau',{delay:200,distance : '80px',duration : 2000,reset : true, origin:'left'});
-        ScrollReveal().reveal('#activity01',{delay:300,distance : '220px',duration : 2500,reset : true, origin:'top'});
-        ScrollReveal().reveal('#activity02',{delay:300,distance : '120px',duration : 2500,reset : true, origin:'top'});
-        ScrollReveal().reveal('#activity03',{delay:300,distance : '20px',duration : 2500,reset : true, origin:'top'});
-        ScrollReveal().reveal('#author01',{delay:300,distance : '60px',duration : 2500,reset : true, origin:'left'});
-        ScrollReveal().reveal('#author02',{delay:300,distance : '60px',duration : 2500,reset : true, origin:'right'});
-        ScrollReveal().reveal('#author03',{delay:300,distance : '60px',duration : 2500,reset : true, origin:'left'});
-        ScrollReveal().reveal('#author04',{delay:300,distance : '60px',duration : 2500,reset : true, origin:'right'});
+        ScrollReveal().reveal('#activity01',{delay:300,distance : '250px',duration : 2500,reset : true, origin:'top'});
+        ScrollReveal().reveal('#activity02',{delay:300,distance : '200px',duration : 2500,reset : true, origin:'top'});
+        ScrollReveal().reveal('#activity03',{delay:300,distance : '150px',duration : 2500,reset : true, origin:'top'});
+        ScrollReveal().reveal('#author01',{delay:300,distance : '100px',duration : 2500,reset : true, origin:'left'});
+        ScrollReveal().reveal('#author02',{delay:300,distance : '100px',duration : 2500,reset : true, origin:'right'});
+        ScrollReveal().reveal('#author03',{delay:300,distance : '100px',duration : 2500,reset : true, origin:'left'});
+        ScrollReveal().reveal('#author04',{delay:300,distance : '100px',duration : 2500,reset : true, origin:'right'});
     </script>

@@ -1,0 +1,64 @@
+// Vérifier si la donnée existe déjà dans la base de données
+    $donnee = "valeur_de_la_donnée";
+    $sql = "SELECT * FROM nom_de_la_table WHERE colonne = :donnee";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':donnee', $donnee);
+    $stmt->execute();
+
+    // Si la donnée n'existe pas, l'insérer dans la base de données
+    if ($stmt->rowCount() == 0) {
+        $sql = "INSERT INTO nom_de_la_table (colonne) VALUES (:donnee)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':donnee', $donnee);
+        $stmt->execute();
+        echo "La donnée a été enregistrée avec succès.";
+    } else {
+        echo "La donnée existe déjà dans la base de données.";
+    }
+} catch(PDOException $e) {
+    echo "Erreur lors de la connexion à la base de données : " . $e->getMessage();
+}
+
+
+$req = $pdo->prepare("INSERT INTO table_auteur(nom,email,password,file) VALUES(:nom,:email,:password,:file)");
+$req->execute(array(
+    'nom' => $nom,
+    'password' => $pass,
+    'email' => $email,
+    'file' => $_FILES['file']['name']
+));
+
+$read =$pdo->prepare("SELECT * from table_auteur INNER JOIN table_message ON table_auteur.id = table_message.id_message");
+
+<select name="id_auteur" id="" class="form-control" >
+    <?php
+        $selection = $pdo->query("SELECT * FROM table_auteur");
+        while($res = $selection->fetch()){
+    ?> 
+            <option value="<?= $res['id_auteur'];?>"><?= $res['nom'];?></option>
+    <?php
+
+        }
+
+    ?>
+</select>
+
+
+<td class="px-6 py-4">
+    <button type="submit" class="w-full bg-white border border-blue-400 text-blue-400 hover:shadow-inner hover:bg-blue-400 hover:text-white px-3 py-1 rounded-md text-base dark:bg-blue-300 dark:text-white"><a href="models/delete.php?id=<?= $student['id'] ; ?> ">Supprimer</a></button>   
+</td>
+
+<?php
+if(isset($_POST['submit'])){
+    $to = "adresse_email_destinataire@example.com";
+    $subject = "Nouveau message depuis le formulaire";
+    $message = $_POST['message'];
+    $headers = "From: ".$_POST['email']."\r\n";
+    
+    if(mail($to, $subject, $message, $headers)){
+        echo "Le message a été envoyé avec succès.";
+    } else{
+        echo "Une erreur s'est produite lors de l'envoi du message.";
+    }
+}
+?> 

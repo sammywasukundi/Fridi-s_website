@@ -80,7 +80,7 @@ function album(){
 ScrollReveal().reveal('#title',{delay:200,distance : '65px',duration : 2600,reset : true, origin:'top'});
 ScrollReveal().reveal('#para',{delay:450,distance : '20px',duration : 2600,reset : true, origin:'bottom'});
 
-// show and hidden listener
+// show and hidden listener searchbar
 
 
 //longuer du password

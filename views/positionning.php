@@ -1,6 +1,7 @@
-<?php include('models/request_admin.php'); ?>
+<?php include('models/request_admin.php'); include('models/request.php'); ?>
 <?php include('nav.php'); ?>
-<?php echo('test'); ?>
+
+
 <div data-dial-init class="fixed right-6 bottom-6 group z-50">
     <div id="speed-dial-menu-dropdown-alternative-square" class="flex flex-col justify-end hidden py-1 mb-4 space-y-2 bg-white border border-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
         <ul class="text-sm text-gray-500 dark:text-gray-300">
@@ -49,7 +50,7 @@
                     <form class="space-y-2 md:space-y-6" action="" method="post" enctype="multipart/form-data">
                         <div>
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">A</label>
-                            <input type="email" name="destinataire_mail" placeholder="destnataire@gmail.com" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" oninput="longuer()">
+                            <input type="email" name="destinataire_mail" placeholder="destnataire@gmail.com" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
                         <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
                             <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
@@ -69,14 +70,6 @@
                                             <input name="monInputFile" id="monInputFile" type="file" class="hidden" />
                                         </label>
                                     </div> 
-                                    <!-- <div class="flex items-center justify-center w-full">
-                                        <label class="flex flex-col items-center justify-center w-full rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                                                <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"/>
-                                            </svg> 
-                                            <input name="inputImage" id="inputImage" type="file" class="hidden" />
-                                        </label>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
