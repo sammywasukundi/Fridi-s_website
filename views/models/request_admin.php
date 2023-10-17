@@ -163,64 +163,41 @@ if(isset($_POST['submit_message'])){
 }
 
 //submit publication
-if(isset($_POST['submit_publication'])){ 	 	 	 	 	 	 
-    $nom=$_POST['nom'];
-    $coauteurs=$_POST['coauteurs'];
-    $titre=$_POST['titre'];
-    $domaine=$_POST['domaine'];
-    $LaDate=$_POST['LaDate'];
-    $type=$_POST['type'];
-    $paiement=$_POST['paiement'];
-    //$fichier=$_FILES['fichier'];
+// if(isset($_POST['submit_publication'])){ 	 	 	 	 	 	 
+//     $nom=$_POST['nom'];
+//     $coauteurs=$_POST['coauteurs'];
+//     $titre=$_POST['titre'];
+//     $domaine=$_POST['domaine'];
+//     $LaDate=$_POST['LaDate'];
+//     $type=$_POST['type'];
+//     $paiement=$_POST['paiement'];
+//     $fichier=$_FILES['fichier']['name'];
 
-    // if(isset($_FILES['fichier']) AND $_FILES['fichier']['error'] == 0){
-    //     if($_FILES['fichier']['size'] < 8000000)
-    //     {
-    //         $nom_fichier = pathinfo($_FILES['fichier']['name']);
-    //         $recup_extension =  $nom_fichier['extension'];
-    //         $extensions =array('zip','rar','iso','pdf','docx','xlx','odt');
-    //         if(in_array($recup_extension,$extensions)){
-    //             if(move_uploaded_file($_FILES['fichier']['tmp_name'],'livreAuteur/'.basename($_FILES['fichier']['name'])))
-    //             {
-                    $req = $pdo->prepare("INSERT INTO table_articlepublier(nom,coauteurs,titre,domaine,LaDate,type,paiement) VALUES(:nom,:coauteurs,:titre,:domaine,:LaDate,:type,:paiement)");
-                    $req->execute(array(	 	 	 	 	 		
-                        'nom' => $nom,
-                        'coauteurs' => $coauteurs,
-                        'titre' => $titre,
-                        'domaine' => $domaine,
-                        'LaDate' => $LaDate,
-                        'type' => $type,
-                        'paiement' => $paiement
-                        //'fichier' => $_FILES['fichier']['name']
-                    ));                            
-                    if($req){
-                        echo "<script>
-                        alert('fichier publié avec succès');            
-                        </script>";
-                        //exit(0);
-                    }
-                    else{
-                        echo "<script>
-                        alert('fichier non publié');                    
-                        </script>";
-                        //exit(0);
-                    }                   
-    //            }
-    //         }else{
-    //             echo "<script>
-    //             alert('extension non autorisée');            
-    //             </script>";
-    //         }
-    //     }else
-    //     {
-    //         echo "<script>
-    //         alert('Fichier volumineux'); 
-    //         </script>";
+//     $req = $pdo->prepare("INSERT INTO table_articlepublier(nom,coauteurs,titre,domaine,LaDate,type,paiement) VALUES(:nom,:coauteurs,:titre,:domaine,:LaDate,:type,:paiement)");
+//     $req->execute(array(	 	 	 	 	 		
+//         'nom' => $nom,
+//         'coauteurs' => $coauteurs,
+//         'titre' => $titre,
+//         'domaine' => $domaine,
+//         'LaDate' => $LaDate,
+//         'type' => $type,
+//         'paiement' => $paiement,
+//         'fichier' => $_FILES['fichier']['name']
+//     ));                            
+//     if($req){
+//         echo "<script>
+//         alert('fichier publié avec succès');            
+//         </script>";
+//         //exit(0);
+//     }
+//     else{
+//         echo "<script>
+//         alert('fichier non publié');                    
+//         </script>";
+//         //exit(0);
+//     }                   
 
-    //     }
-    // }
-
-}
+// }
 // approbation de user par admin
 if(isset($_POST['submit_autorisation'])){
     $query=$pdo->prepare("UPDATE table_auteur SET is_approved=true");
@@ -229,14 +206,30 @@ if(isset($_POST['submit_autorisation'])){
         echo "<script>
         alert('Utilisateur autorisé');            
         </script>";
-        //header('Location:../admin.php');
-        //exit(0);
     }
     else{
         echo "<script>
-        alert('Utilisateur autorisé');            
+        alert('Utilisateur non autorisé');            
         </script>";
-        //header('Location:../admin.php');
+        exit(0);
+    }
+}
+
+// publication du document
+if(isset($_POST['submit_publication'])){
+    //$_SESSION['id'] = $update['id'];
+    //$id = $_GET['id'];
+    $update=$pdo->prepare("UPDATE table_livre SET is_published=true");
+    $update->execute();
+    if($update){
+        echo "<script>
+        alert('Fichier publié');            
+        </script>";
+    }
+    else{
+        echo "<script>
+        alert('Fichier non publié');            
+        </script>";
         exit(0);
     }
 }

@@ -1,6 +1,6 @@
 <?php session_start(); include 'nav.php'; include 'models/request_admin.php' ?>  
 <?php
-    $select=$pdo->prepare("SELECT * FROM table_livre");
+    $select=$pdo->prepare("SELECT * FROM table_livre where is_published=true");
     $select->execute();
     while($read=$select->fetch()){
         $_SESSION['avatarAuteur'] = $read['avatarAuteur'];
