@@ -215,24 +215,8 @@ if(isset($_POST['submit_autorisation'])){
     }
 }
 
-// publication du document
-if(isset($_POST['submit_publication'])){
-    //$_SESSION['id'] = $update['id'];
-    //$id = $_GET['id'];
-    $update=$pdo->prepare("UPDATE table_livre SET is_published=true");
-    $update->execute();
-    if($update){
-        echo "<script>
-        alert('Fichier publié');            
-        </script>";
-    }
-    else{
-        echo "<script>
-        alert('Fichier non publié');            
-        </script>";
-        exit(0);
-    }
-}
+
+
 
 
 ?>

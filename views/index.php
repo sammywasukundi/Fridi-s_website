@@ -192,7 +192,7 @@
             <?php } ?>
             <?php
                 if(isset($_SESSION['id_auteur']) || isset($_SESSION['id_admin'])){
-                    $select=$pdo->prepare('SELECT * FROM table_livre ORDER BY id DESC LIMIT 0, 2');
+                    $select=$pdo->prepare('SELECT * FROM table_livre where is_published=true ORDER BY id DESC LIMIT 0, 2 ');
                     $select->execute();
                     while($read=$select->fetch()){
                         $_SESSION['avatarAuteur'] = $read['avatarAuteur'];

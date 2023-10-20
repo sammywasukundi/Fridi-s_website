@@ -92,7 +92,12 @@
                                 while($student=$read->fetch()){
                             ?> 
                                 <form action="" method="post" enctype="multipart/form-data">
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                
+                                    
+                                    <?php
+                                        if($student['is_published']==false){
+                                            ?>
+                                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             <img class="rounded-full w-9 h-9 object-cover" src="avatar_auteur/<?= $student['avatarAuteur'] ; ?>" alt="">
                                         </th>
@@ -126,14 +131,15 @@
                                         </td>
                                                                     
                                         <td class="px-6 py-4">
-                                            <form action="" method="post">
-                                                <input type="hidden" name='id'>
-                                                <button type="submit" name="submit_publication" class="inline-flex bg-white shadow-md hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-2 py-1.5 rounded-md font-semibold dark:bg-gray-800 dark:shadow-lg">
+                                            <!-- <form action="" method="post"> -->
+                                                 
+                                                <a href="models/update.php?id=<?= $student['id'] ; ?> " class="inline-flex bg-white shadow-md hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-2 py-1.5 rounded-md font-semibold dark:bg-gray-800 dark:shadow-lg">
                                                     <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                                     </svg>
-                                                </button>
-                                            </form>
+                                                </a>
+                                                
+                                            <!-- </form> -->
                                         </td>
                                         <td class="px-6 py-4">
                                                 <a href="livre_auteur/<?= $student['livreAuteur'] ;?>" class="inline-flex bg-white shadow-md hover:shadow-inner transform hover:scale-110 hover:bg-blue-400 hover:text-white transition ease-in duration-500 px-2 py-1.5 rounded-md font-semibold dark:bg-gray-800 dark:shadow-lg">
@@ -154,8 +160,8 @@
                                         </td>
 
                                     </tr>
-                                    <?php
-
+                                            <?php
+                                        }
                                             ++$i;
                                         }
                                     ?>
