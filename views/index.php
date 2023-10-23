@@ -159,19 +159,20 @@
                         </p>
                     </div>
                 </div>
-                <div id="activity02" class="max-w-sm rounded overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110">
-                    <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/book2.jpg" alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">Production du cahier FRIDI</div>
-                        <p class="text-gray-700 text-base dark:text-white">
-                            Le Foyer de Recherche interdisciplinaire pour le développement
-                            integré(FRIDI) est un centre de recherche disposant d'une
-                            maison d'édition de publication nomée EDITIONS DU FRIDI
-                            (EdiFridi) de l'Université Adventiste de Lukanga et l'ISTM-Lukanga
-                        </p>
+                <a href="FPDF/assaie1.php">
+                    <div id="activity02" class="max-w-sm rounded overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110">
+                        <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/book2.jpg" alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Production du cahier FRIDI</div>
+                            <p class="text-gray-700 text-base dark:text-white">
+                                Le Foyer de Recherche interdisciplinaire pour le développement
+                                integré(FRIDI) est un centre de recherche disposant d'une
+                                maison d'édition de publication nomée EDITIONS DU FRIDI
+                                (EdiFridi) de l'Université Adventiste de Lukanga et l'ISTM-Lukanga
+                            </p>
+                        </div>
                     </div>
-                </div>
-                
+                </a>
                 <div id="activity03" class="max-w-sm rounded overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110">
                         <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/book2.jpg" alt="Sunset in the mountains">
                         <div class="px-6 py-4">

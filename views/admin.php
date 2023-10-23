@@ -338,7 +338,7 @@
                 </div>
             </div>
         </div>
-        <?php include 'positionning2.php'; include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         
     </div>
     <script defer>

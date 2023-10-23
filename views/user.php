@@ -42,7 +42,7 @@
             <?php                            
                 }
             ?>
-    <div id="wrapper" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;" class="max-w-4xl mx-auto w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div id="wrapper" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;" class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <div class="sm:hidden">
             <label for="tabs" class="sr-only">Select tab</label>
             <select id="tabs" class="hidden bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -65,7 +65,7 @@
         </ul>
         <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
             <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
-                <form action="https://marchand.maishapay.online/payment/vers1.0/merchant/checkout" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data" class="max-w-2xl mx-auto">
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div>
                             <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
@@ -364,7 +364,7 @@
         </div>
         </div>
     </div>
-    <?php if(isset($_SESSION['id_auteur'] )|| isset($_SESSION['id_admin'])){ include 'positionning2.php'; }?>
+    <?php //if(isset($_SESSION['id_auteur'] )|| isset($_SESSION['id_admin'])){ include 'positionning2.php'; }?>
     <?php include 'footer.php'; ?>
 </div>
 

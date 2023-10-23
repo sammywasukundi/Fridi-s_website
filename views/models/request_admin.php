@@ -215,7 +215,20 @@ if(isset($_POST['submit_autorisation'])){
     }
 }
 
+if(isset($_POST["submit_facture"])){
+    $nom_auteur=$_POST['nom_auteur'];
+    $montant_paye=$_POST['montant_paye'];
+    $motif_paiement=$_POST['motif_paiement'];
 
+    $facturation="INSERT INTO table_facture(nom_auteur,montant_paye,motif_paiement) VALUES('$nom_auteur','$montant_paye','$motif_paiement')";
+    $pdo->exec($facturation);
+    if($facturation){
+        echo 'facturation réussie';
+    }
+    else{
+        echo "erreur lors de l'insertion";
+    }
+}
 
 
 
