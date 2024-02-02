@@ -151,7 +151,7 @@
             <h2 class="text-center font-semibold mt-12" style="text-shadow: 0 0 2px #316472;">Nos activités principales</h2>  
             <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6 space-x-4 px-24 py-14">
                 <div id="activity01" class="max-w-sm rounded overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110">
-                    <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/book2.jpg" alt="Sunset in the mountains">
+                    <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/etudiants.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">Suivie de la recherche des étudiants</div>
                         <p class="text-gray-700 text-base dark:text-white">
@@ -159,9 +159,9 @@
                         </p>
                     </div>
                 </div>
-                <a href="FPDF/assaie1.php">
+                <a href="#">
                     <div id="activity02" class="max-w-sm rounded overflow-hidden shadow-lg card hover:shadow-lg transition ease-in duration-300 transform hover:scale-110">
-                        <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/book2.jpg" alt="Sunset in the mountains">
+                        <img class="w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="images/cahier.jpg" alt="Sunset in the mountains">
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">Production du cahier FRIDI</div>
                             <p class="text-gray-700 text-base dark:text-white">
